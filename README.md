@@ -45,13 +45,11 @@ This repository follows the general DCASE challenge direction of ASD baselines a
 
 ## 🧩 Architecture Diagram
 
-   ```mermaid
-
-   flowchart LR
-     A[Raw machine audio<br/>(KTX depot recordings)] --> B[Windowing pipeline<br/>(fixed-length segments)]
-     B --> C[Feature processing<br/>(normalization)]
-     C --> D[Baseline Autoencoder<br/>(fine-tuning)]
-     D --> E[Reconstruction error]
-     E --> F[Anomaly score<br/>(window-level)]
-     F --> G[Logs / Results<br/>(thresholding & analysis)]
-   ```
+      flowchart LR
+        A[Raw machine audio<br/>(KTX depot recordings)] --> B[Windowing pipeline<br/>(fixed-length segments)]
+        B --> C[Feature processing<br/>(normalization)]
+        C --> D[Baseline Autoencoder<br/>(fine-tuning)]
+        D --> E[Reconstruction error]
+        E --> F[Anomaly score<br/>(window-level)]
+        F --> G[Logs / Results<br/>(thresholding & analysis)]
+   
