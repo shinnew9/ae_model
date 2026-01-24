@@ -1,5 +1,5 @@
-AutoEncoder model referred from DCASE challenge 2024 for Anomaly Sound Detection and will update the final version of model ASAP
+# ae_model
 
+> Autoencoder-based anomaly detection experiments conducted at an early-stage startup, 
+> focusing on representation learning from real-world device signals.
 
-
-This is also another next target, I will update ASAP.
