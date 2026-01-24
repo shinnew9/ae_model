@@ -1,31 +1,54 @@
 # AutoEncoder_model
+**DCASE 2024 Baseline Autoencoder Fine-Tuning for Real-World Anomalous Sound Detection (KTX Depot Data)**
 
-> Autoencoder-based anomaly detection experiments conducted at an early-stage startup, 
-> focusing on representation learning from real-world device signals.
+> Fine-tuned a DCASE 2024 baseline autoencoder model for anomalous sound detection using real-world audio collected from KTX maintenance environments (e.g., traction motor-related equipment).
 
-<br>
+---
 
-## 🔑 Project Overview
-This repository contains autoencoder-based modeling experiments conducted during my time at a startup.
-The goal was to explore whether unsupervised representation learning could help identify abnormal patterns
-in real-world device signal data.
+## TL;DR
+- **Task:** Unsupervised anomalous sound detection (ASD)
+- **Model:** DCASE-style **baseline autoencoder** fine-tuning
+- **Data:** Real-world machine/maintenance audio (windowed segments in `windowed_data/`)
+- **Output:** Anomaly scores based on reconstruction error + evaluation logs/results
 
-<br>
+---
 
-## 🎯 Problem Context
-In real-world production environments, abnormal device behavior is often difficult to label in advance.
-This project investigates the use of autoencoders to learn normal signal patterns and detect deviations
-without relying on labeled anomaly data.
+## Background
+Anomalous sound detection is commonly framed as an **unsupervised / domain-generalization** problem in industrial monitoring.
+This repository follows the general DCASE challenge direction of ASD baselines and adapts them to real recorded machine sounds. :contentReference[oaicite:1]{index=1}
 
-<br>
+---
 
-## 🧠 Approach
-- Trained autoencoders to reconstruct normal signal patterns
-- Used reconstruction error as an anomaly signal
-- Compared model behavior under different architectures and latent dimensions
+## What’s Inside
+- `windowed_data/` — windowed audio segments derived from real-world recordings
+- `windowing.py` / `window+ing.ipynb` — audio windowing pipeline
+- `autoencoder.py` — baseline AE architecture
+- `anomaly_detector.py` — inference / anomaly scoring logic
+- `models/`, `logs/`, `results/` — checkpoints, run logs, and outputs
 
+---
 
-<br>
+## Approach
+1. **Preprocess audio**
+   - Convert raw recordings into fixed-length windows (frames)
+   - Normalize / standardize features for stable training
 
-## 📊 Data Characteristics
+2. **Fine-tune baseline AE**
+   - Train the autoencoder to reconstruct normal patterns
+   - Use **reconstruction error** as anomaly score
 
+3. **Inference & scoring**
+   - Compute anomaly score per window
+   - Aggregate / analyze results (logs + saved outputs)
+
+---
+
+## 🧩 Architecture Diagram
+```mermaid
+flowchart LR
+  A[Raw machine audio<br/>(KTX depot recordings)] --> B[Windowing pipeline<br/>(fixed-length segments)]
+  B --> C[Feature processing<br/>(normalization)]
+  C --> D[Baseline Autoencoder<br/>(fine-tuning)]
+  D --> E[Reconstruction error]
+  E --> F[Anomaly score<br/>(window-level)]
+  F --> G[Logs / Results<br/>(thresholding & analysis)]
