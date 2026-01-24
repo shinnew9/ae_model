@@ -20,3 +20,8 @@ without relying on labeled anomaly data.
 <br>
 
 ## 🧠 Approach
+- Trained autoencoders to reconstruct normal signal patterns
+- Used reconstruction error as an anomaly signal
+- Compared model behavior under different architectures and latent dimensions
+
+
