@@ -3,7 +3,6 @@
 > Autoencoder-based anomaly detection experiments conducted at an early-stage startup, 
 > focusing on representation learning from real-world device signals.
 
-<br>
 
 ## 🔑 Project Overview
 This repository contains autoencoder-based modeling experiments conducted during my time at a startup.
