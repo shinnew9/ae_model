@@ -16,3 +16,7 @@ in real-world device signal data.
 In real-world production environments, abnormal device behavior is often difficult to label in advance.
 This project investigates the use of autoencoders to learn normal signal patterns and detect deviations
 without relying on labeled anomaly data.
+
+<br>
+
+## 🧠 Approach
