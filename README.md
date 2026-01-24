@@ -53,7 +53,7 @@ This repository follows the general DCASE challenge direction of ASD baselines a
         E --> F[Anomaly score<br/>(window-level)]
         F --> G[Logs / Results<br/>(thresholding & analysis)]
 
-
+<!--
 Key Points
 
 Separates data windowing from model training and anomaly scoring
@@ -83,3 +83,4 @@ Add frequency-domain augmentations and calibration
 
 Compare AE baseline vs stronger models (e.g., CNN-based embedding + density estimation)
 
+-->
