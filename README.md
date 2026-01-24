@@ -25,3 +25,7 @@ without relying on labeled anomaly data.
 - Compared model behavior under different architectures and latent dimensions
 
 
+<br>
+
+## 📊 Data Characteristics
+
