@@ -31,7 +31,7 @@ This repository follows the general DCASE challenge direction of ASD baselines a
 ## Approach
 1. **Preprocess audio**
    - Convert raw recordings into fixed-length windows (frames)
-   - Normalize / standardize features for stable training
+   - Normalize/Standardize features for stable training
 
 2. **Fine-tune baseline AE**
    - Train the autoencoder to reconstruct normal patterns
@@ -53,7 +53,7 @@ This repository follows the general DCASE challenge direction of ASD baselines a
         E --> F[Anomaly score<br/>(window-level)]
         F --> G[Logs / Results<br/>(thresholding & analysis)]
 
-Key Points
+### Key Points
 - Separates data windowing from model training and anomaly scoring
 - Fine-tunes a lightweight baseline AE to adapt to real-world audio distributions
 
