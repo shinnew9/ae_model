@@ -53,19 +53,15 @@ This repository follows the general DCASE challenge direction of ASD baselines a
         E --> F[Anomaly score<br/>(window-level)]
         F --> G[Logs / Results<br/>(thresholding & analysis)]
 
-<!--
 Key Points
+- Separates data windowing from model training and anomaly scoring
+- Fine-tunes a lightweight baseline AE to adapt to real-world audio distributions
 
-Separates data windowing from model training and anomaly scoring
-
-Fine-tunes a lightweight baseline AE to adapt to real-world audio distributions
-
-Notes on Data
-
+## Notes on Data
 This repository includes real-world audio-derived windows under windowed_data/.
 If you plan to publish or redistribute the dataset, confirm internal/company policy and data usage constraints.
 
-How to Run (Example)
+# How to Run (Example)
 pip install -r requirements.txt
 python main.py
 
