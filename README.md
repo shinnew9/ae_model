@@ -62,10 +62,8 @@ This repository includes real-world audio-derived windows under windowed_data/.
 If you plan to publish or redistribute the dataset, confirm internal/company policy and data usage constraints.
 
 # How to Run (Example)
-      '''
       pip install -r requirements.txt
       python main.py
-      '''
    
 <!--
 ### Results (Optional)
